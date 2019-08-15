@@ -1,0 +1,13 @@
+{
+  "name": "leetcode",
+  "version": "1.0.0",
+  "description": "leetcode",
+  "scripts": {
+    "test": "jest src/**/*.spec.js"
+  },
+  "author": "XueDong Wang",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^24.8.0"
+  }
+}
