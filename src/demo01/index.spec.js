@@ -8,10 +8,6 @@ test('twoNumberSum([1, 2, 3, 4], 5) return [0, 3]', () => {
   expect(index([1, 2, 3, 4], 5)).toEqual([0, 3]);
 });
 
-test('twoNumberSum([1, 1, 1, 1], 2) return [0, 1]', () => {
-  expect(index([1, 1, 1, 1], 2)).toEqual([0, 1]);
-});
-
 test('twoNumberSum([-1, -2, -3, -4], -4) return [0, 2]', () => {
   expect(index([-1, -2, -3, -4], -4)).toEqual([0, 2]);
 });

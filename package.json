@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "leetcode",
   "scripts": {
-    "test": "jest src/**/*.spec.js",
+    "test": "jest src/demo01/*.spec.js --coverage",
+    "test:all": "jest src/**/*.spec.js --coverage",
     "commit": "git pull && git add . && git commit -m 'auto commit' && git push"
   },
   "author": "XueDong Wang",
