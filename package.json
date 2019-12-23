@@ -3,13 +3,15 @@
   "version": "1.0.0",
   "description": "leetcode",
   "scripts": {
-    "test": "jest src/demo01/*.spec.js --coverage",
+    "new": "node ./shell/createNew.js",
+    "test": "jest src/demo12/*.spec.js --coverage",
     "test:all": "jest src/**/*.spec.js --coverage",
     "commit": "git pull && git add . && git commit -m 'auto commit' && git push"
   },
   "author": "XueDong Wang",
   "license": "MIT",
   "devDependencies": {
+    "inquirer": "^7.0.1",
     "jest": "^24.8.0"
   }
 }
