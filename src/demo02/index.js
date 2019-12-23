@@ -2,22 +2,24 @@
  * @ref: https://leetcode-cn.com/problems/reverse-integer/
  */
 
-const reverseNum = function (num) {
-  const max = Number.MAX_SAFE_INTEGER;
-  const min = Number.MIN_SAFE_INTEGER;
-  // const min = Math.pow(-2, 31);
-  // const max = Math.pow(2, 31) - 1;
-  let ret;
-  if (num >= 0) {
-    ret = +num.toString().split('').reverse().join('');
-  } else {
-    ret = -num.toString().slice(1).split('').reverse().join('');
+const reverse = function (x) {
+  let ret = 0;
+  debugger;
+  while (x !== 0) {
+    const pop = x % 10;
+    x = parseInt(x / 10);
+    // if (ret > Number.MAX_SAFE_INTEGER / 10 || (ret === Number.MAX_SAFE_INTEGER / 10 && (pop > Number.MAX_SAFE_INTEGER % 10))) { // to big
+    //   return 0;
+    // }
+    // if (ret < Number.MAX_SAFE_INTEGER / 10 || (ret === Number.MAX_SAFE_INTEGER / 10 && (pop < Number.MAX_SAFE_INTEGER % 10))) { // to small
+    //   return 0;
+    // }
+    ret = ret * 10 + pop;
+    if (ret > Number.MAX_SAFE_INTEGER || ret < Number.MIN_SAFE_INTEGER) {
+      return 0;
+    }
   }
-  if (ret >= min && ret <= max) {
-    return ret;
-  } else {
-    return 0;
-  }
+  return ret;
 }
 
-module.exports = reverseNum;
+module.exports = reverse;
