@@ -23,8 +23,8 @@ test('${funcName}() return ', () => {
 
 const dirs = fs.readdirSync(path.join(__dirname, '../src'));
 
-const index = dirs.slice(-1)[0].match(/demo(\d+)/)[1];
-const COMMON_DIR_PREFIX = 'demo';
+const lastIndex = dirs.slice(-1)[0].match(/question(\d+)/)[1];
+const COMMON_DIR_PREFIX = 'question';
 let funcName;
 inquirer.prompt([{ 
   type: 'input', 
@@ -41,10 +41,9 @@ inquirer.prompt([{
   ref = answers.ref;
   const func = funcTpl(funcName, ref);
   const test = testTpl(funcName);
-  const dirname = path.join(__dirname, `../src/${COMMON_DIR_PREFIX}${parseInt(index) + 1}`);
+  const dirname = path.join(__dirname, `../src/${COMMON_DIR_PREFIX}${parseInt(lastIndex) + 1}`);
   fs.mkdirSync(dirname); // make dir
   fs.writeFileSync(path.join(dirname, `index.js`), func);
   fs.writeFileSync(path.join(dirname, `index.spec.js`), test);
+  fs.readFileSync(path.join(__dirname, '../package.join'), 'utf8').replace(`${COMMON_DIR_PREFIX}${parseInt(lastIndex)}`, `${COMMON_DIR_PREFIX}${parseInt(lastIndex) + 1}`)
 });
-
-
