@@ -23,7 +23,6 @@ const merge = function (left, right) {
   }
   return result;
 }
-const arr = [8,7,6,5,4,3,2,1]
 const mergeSort = function (arr) {
   if (arr.length <= 1) {
     return arr;
@@ -34,8 +33,5 @@ const mergeSort = function (arr) {
   let right = mergeSort(arr.slice(m))
   return merge(left, right)
 }
-console.log('before', arr);
-console.log('after', mergeSort(arr));
-
 
 module.exports = mergeSort;
