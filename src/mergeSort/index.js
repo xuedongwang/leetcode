@@ -23,14 +23,15 @@ const merge = function (left, right) {
   }
   return result;
 }
+
 const mergeSort = function (arr) {
   if (arr.length <= 1) {
     return arr;
   }
-  let m = Math.floor(arr.length / 2)
-  let left = mergeSort(arr.slice(0, m))
-  let right = mergeSort(arr.slice(m))
-  return merge(left, right)
+  let m = Math.floor(arr.length / 2) // 2 // 1
+  let left = mergeSort(arr.slice(0, m)) // [5,4] // [5]
+  let right = mergeSort(arr.slice(m)) // [4]
+  return merge(left, right) // [5] [4] -> [4, 5]
 }
 
 module.exports = mergeSort;
