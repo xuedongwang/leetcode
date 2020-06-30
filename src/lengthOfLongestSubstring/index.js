@@ -2,25 +2,43 @@
 /**
  * @ref: https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/
  */
-
+// a b c a b c b b
+// 0 1 2 3 4 5 6 7
 const lengthOfLongestSubstring = function (s) {
+  const map = new Map();
+  let left = 0;
   let maxLength = 0;
-  let currentStr = '';
   for (let i = 0; i < s.length; i++) {
-    for (let j = i; j < s.length; j++) {
-      if (currentStr.includes(s[j])) {
-        maxLength = Math.max(currentStr.length, maxLength);
-        currentStr = '';
-        break;
-      } else {
-        currentStr += s[j];
-      }
+    if (map.has(s[i])) {
+      left = map.get(s[i]) + 1;
+    } else {
+      map.set(s[i], i);
     }
+    maxLength = Math.max(maxLength, i - left);
   }
-  return Math.max(currentStr.length, maxLength);
+  return maxLength;
 }
 
 module.exports = lengthOfLongestSubstring;
+
+// const lengthOfLongestSubstring = function (s) {
+//   let maxLength = 0;
+//   let currentStr = '';
+//   for (let i = 0; i < s.length; i++) {
+//     for (let j = i; j < s.length; j++) {
+//       if (currentStr.includes(s[j])) {
+//         maxLength = Math.max(currentStr.length, maxLength);
+//         currentStr = '';
+//         break;
+//       } else {
+//         currentStr += s[j];
+//       }
+//     }
+//   }
+//   return Math.max(currentStr.length, maxLength);
+// }
+
+// module.exports = lengthOfLongestSubstring;
 
 /**
 示例 1:
