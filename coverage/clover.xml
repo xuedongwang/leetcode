@@ -1,20 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1593521739634" clover="3.2.0">
-  <project timestamp="1593521739634" name="All files">
-    <metrics statements="11" coveredstatements="11" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1" elements="14" coveredelements="14" complexity="0" loc="11" ncloc="11" packages="1" files="1" classes="1"/>
+<coverage generated="1593567026937" clover="3.2.0">
+  <project timestamp="1593567026937" name="All files">
+    <metrics statements="14" coveredstatements="14" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1" elements="19" coveredelements="19" complexity="0" loc="14" ncloc="14" packages="1" files="1" classes="1"/>
     <file name="index.js" path="/Users/meishakeji/Project/leetcode/src/lengthOfLongestSubstring/index.js">
-      <metrics statements="11" coveredstatements="11" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+      <metrics statements="14" coveredstatements="14" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
       <line num="7" count="1" type="stmt"/>
       <line num="8" count="5" type="stmt"/>
       <line num="9" count="5" type="stmt"/>
       <line num="10" count="5" type="stmt"/>
       <line num="11" count="5" type="stmt"/>
-      <line num="12" count="29" type="cond" truecount="2" falsecount="0"/>
-      <line num="13" count="14" type="stmt"/>
-      <line num="15" count="29" type="stmt"/>
-      <line num="16" count="29" type="stmt"/>
-      <line num="18" count="5" type="stmt"/>
-      <line num="21" count="1" type="stmt"/>
+      <line num="12" count="5" type="stmt"/>
+      <line num="13" count="29" type="cond" truecount="2" falsecount="0"/>
+      <line num="14" count="24" type="stmt"/>
+      <line num="17" count="29" type="cond" truecount="2" falsecount="0"/>
+      <line num="18" count="29" type="stmt"/>
+      <line num="19" count="29" type="stmt"/>
+      <line num="21" count="29" type="stmt"/>
+      <line num="23" count="5" type="stmt"/>
+      <line num="26" count="1" type="stmt"/>
     </file>
   </project>
 </coverage>

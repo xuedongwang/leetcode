@@ -5,15 +5,20 @@
 // a b c a b c b b
 // 0 1 2 3 4 5 6 7
 const lengthOfLongestSubstring = function (s) {
-  const map = new Map();
-  let left = 0;
+  const set = new Set();
+  let right = -1;
   let maxLength = 0;
-  for (let i = 0; i < s.length; i++) {
-    if (map.has(s[i])) {
-      left = Math.max(map.get(s[i]), left + 1);
+  let strLength = s.length;
+  for (let i = 0; i < strLength; i++) {
+    if (i !== 0) {
+      set.delete(s[i-1]);
     }
-    map.set(s[i], i);
-    maxLength = Math.max(maxLength, i - left + 1);
+    
+    while (right < strLength - 1 && !set.has(s[right+1])) {
+      set.add(s[right+1]);
+      right ++
+    }
+    maxLength = Math.max(maxLength, right - i + 1);
   }
   return maxLength;
 }
