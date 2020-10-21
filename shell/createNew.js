@@ -25,13 +25,13 @@ let funcName;
 inquirer.prompt([{ 
   type: 'input', 
   name: 'funcName', 
-  message: '函数的名字是？', 
+  message: '函数的名字是？(what\'s function name?)', 
   default: 'func' 
 }, { 
   type: 'input', 
   name: 'ref', 
-  message: '来源', 
-  default: '' 
+  message: '来源？(where\'s question from?)', 
+  default: '未知来源' 
 }]).then(answers => {
   funcName = answers.funcName;
   ref = answers.ref;
