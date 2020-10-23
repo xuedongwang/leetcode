@@ -4,7 +4,7 @@
   "description": "leetcode",
   "scripts": {
     "new": "node ./shell/createNew.js",
-    "test": "jest src/quickSort/*.spec.js --coverage",
+    "test": "jest src/game/*.spec.js --coverage",
     "test:all": "jest src/**/*.spec.js --coverage",
     "commit": "git pull && git add . && git commit -m 'auto commit' && git push"
   },
