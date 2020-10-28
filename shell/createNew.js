@@ -15,8 +15,8 @@ module.exports = ${funcName};
 const testTpl = funcName => `
 const ${funcName} = require('./index');
 
-test(\`${funcName}() return \`, () => {
-  expect(${funcName}()).toBe();
+test(\`${funcName}() return result\`, () => {
+  expect(${funcName}()).toBe(result);
 });
 
 `;
