@@ -43,5 +43,6 @@ inquirer.prompt([{
   fs.writeFileSync(path.join(dirname, `index.spec.js`), test);
   const packageJSON = require(path.join(__dirname, '../package.json'))
   packageJSON.scripts.test = `jest src/${funcName}/*.spec.js --coverage`;
+  packageJSON.scripts.debug = `node src/${funcName}/index.js`;
   fs.writeFileSync(path.join(__dirname, '../package.json'), JSON.stringify(packageJSON, null, 2))
 });
