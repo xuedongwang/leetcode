@@ -4,10 +4,10 @@
   "description": "leetcode",
   "scripts": {
     "new": "node ./shell/createNew.js",
-    "test": "jest src/dailyTemperatures/*.spec.js --coverage",
+    "test": "jest src/reverseLeftWords/*.spec.js --coverage",
     "test:all": "jest src/**/*.spec.js --coverage",
     "commit": "git pull && git add . && git commit -m 'auto commit' && git push",
-    "debug": "node src/dailyTemperatures/index.js"
+    "debug": "node src/reverseLeftWords/index.js"
   },
   "author": "XueDong Wang",
   "license": "MIT",
