@@ -44,5 +44,6 @@ inquirer.prompt([{
   const packageJSON = require(path.join(__dirname, '../package.json'))
   packageJSON.scripts.test = `jest src/${funcName}/*.spec.js --coverage`;
   packageJSON.scripts.debug = `node src/${funcName}/index.js`;
+  packageJSON.scripts.commit = `git pull && git add . && git commit -m 'feat(${funcName}): 增加 ${funcName} 并完成测试' && git push`;
   fs.writeFileSync(path.join(__dirname, '../package.json'), JSON.stringify(packageJSON, null, 2))
 });
