@@ -4,10 +4,10 @@
   "description": "leetcode",
   "scripts": {
     "new": "node ./shell/createNew.js",
-    "test": "jest src/countConsistentStrings/*.spec.js --coverage",
+    "test": "jest src/MinStack/*.spec.js --coverage",
     "test:all": "jest src/**/*.spec.js --coverage",
-    "commit": "git pull && git add . && git commit -m 'feat(countConsistentStrings): 增加 countConsistentStrings 并完成测试' && git push",
-    "debug": "node src/countConsistentStrings/index.js"
+    "commit": "git pull && git add . && git commit -m 'feat(MinStack): 增加 MinStack 并完成测试' && git push",
+    "debug": "node src/MinStack/index.js"
   },
   "author": "XueDong Wang",
   "license": "MIT",
