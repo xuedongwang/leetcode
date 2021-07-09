@@ -5,15 +5,15 @@
 
 const moveZeroes = function (nums) {
   let index = nums.length - 1;
-  while(index >= 0) {
+  while (index >= 0) {
     if (nums[index] === 0) {
       nums.push(nums[index]);
       nums.splice(index, 1);
     }
-    index --;
+    index--;
   }
   return nums;
-}
+};
 
 module.exports = moveZeroes;
 

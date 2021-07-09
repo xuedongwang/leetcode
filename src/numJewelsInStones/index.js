@@ -13,11 +13,11 @@ const numJewelsInStones = function (J, S) {
 
   for (let i = 0; i < S.length; i++) {
     if (map.get(S[i])) {
-      result ++;
+      result++;
     }
   }
 
   return result;
-}
+};
 
 module.exports = numJewelsInStones;

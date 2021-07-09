@@ -9,7 +9,7 @@ const findLeastNumOfUniqueInts = function (arr, k) {
     if (!map.has(item)) {
       map.set(item, 0);
     }
-    map.set(item, map.get(item) + 1)
+    map.set(item, map.get(item) + 1);
   });
   const valueArr = [...map.values()].sort((a, b) => a - b);
 
@@ -18,13 +18,13 @@ const findLeastNumOfUniqueInts = function (arr, k) {
   for (let i = 0; i < valueArr.length; i++) {
     const value = valueArr[i];
     if (value <= k) {
-      result --;
+      result--;
       k -= value;
     } else {
       return result;
     }
   }
   return result;
-}
+};
 
 module.exports = findLeastNumOfUniqueInts;

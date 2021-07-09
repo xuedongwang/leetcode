@@ -20,4 +20,3 @@ test('lengthOfLongestSubstring(aab) return 2', () => {
 test('lengthOfLongestSubstring(tmmzuxt) return 5', () => {
   expect(lengthOfLongestSubstring('tmmzuxt')).toBe(5);
 });
-

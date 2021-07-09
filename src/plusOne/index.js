@@ -22,6 +22,6 @@ const plusOne = function (digits) {
     result.unshift(curry);
   }
   return result;
-}
+};
 
 module.exports = plusOne;

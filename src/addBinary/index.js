@@ -13,11 +13,11 @@ const addBinary = function (a, b) {
     let n = 0;
     if (aLength > 0) {
       m = parseInt(a[aLength - 1]);
-      aLength --;
+      aLength--;
     }
     if (bLength > 0) {
       n = parseInt(b[bLength - 1]);
-      bLength --;
+      bLength--;
     }
     let total = m + n + curry;
     if (total > 1) {
@@ -26,13 +26,13 @@ const addBinary = function (a, b) {
     } else {
       curry = 0;
     }
-    
-    sum = total + sum
+
+    sum = total + sum;
   }
   if (curry > 0) {
-    sum = curry + sum
+    sum = curry + sum;
   }
   return sum;
-}
+};
 
 module.exports = addBinary;

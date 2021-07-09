@@ -10,7 +10,7 @@ function swap (arr, x, y) {
 }
 
 const selectSort = function (arr) {
-  for (let x = 0; x < arr.length - 1; x ++) {
+  for (let x = 0; x < arr.length - 1; x++) {
     let minIndex = x;
     for (let i = minIndex + 1; i < arr.length; i++) {
       if (arr[minIndex] > arr[i]) {
@@ -22,6 +22,6 @@ const selectSort = function (arr) {
     }
   }
   return arr;
-}
+};
 
 module.exports = selectSort;

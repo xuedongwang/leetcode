@@ -7,11 +7,18 @@
     "test": "jest src/firstUniqChar/*.spec.js --coverage",
     "test:all": "jest src/**/*.spec.js --coverage",
     "commit": "git pull && git add . && git commit -m 'feat(firstUniqChar): 增加 firstUniqChar 并完成测试' && git push",
-    "debug": "node src/firstUniqChar/index.js"
+    "debug": "node src/firstUniqChar/index.js",
+    "lint": "eslint --ext=.js src/*",
+    "lint:fix": "eslint --ext=.js src/* --fix"
   },
   "author": "XueDong Wang",
   "license": "MIT",
   "devDependencies": {
+    "eslint": "^7.30.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0",
     "inquirer": "^7.0.1",
     "jest": "^24.8.0"
   }

@@ -7,19 +7,19 @@ const interpret = function (command) {
   const map = new Map([
     ['G', 'G'],
     ['()', 'o'],
-    ['(al)', 'al'],
+    ['(al)', 'al']
   ]);
   let temp = '';
-  let result=  '';
+  let result = '';
   for (let i = 0; i < command.length; i++) {
     temp += command[i];
     if (map.has(temp)) {
       result += map.get(temp);
-      temp = ''
+      temp = '';
     }
   }
   return result;
-}
+};
 
 module.exports = interpret;
 

@@ -6,16 +6,16 @@
 /**
  * initialize your data structure here.
  */
-const MinStack = function() {
+const MinStack = function () {
   this.stack = [];
   this.minStack = [Infinity];
 };
 
-/** 
+/**
 * @param {number} x
 * @return {void}
 */
-MinStack.prototype.push = function(x) {
+MinStack.prototype.push = function (x) {
   this.stack.push(x);
   this.minStack.push(Math.min(this.minStack[this.minStack.length - 1], x));
   return null;
@@ -24,7 +24,7 @@ MinStack.prototype.push = function(x) {
 /**
 * @return {void}
 */
-MinStack.prototype.pop = function() {
+MinStack.prototype.pop = function () {
   this.minStack.pop();
   return this.stack.pop();
 };
@@ -32,14 +32,14 @@ MinStack.prototype.pop = function() {
 /**
 * @return {number}
 */
-MinStack.prototype.top = function() {
+MinStack.prototype.top = function () {
   return this.stack[this.stack.length - 1];
 };
 
 /**
 * @return {number}
 */
-MinStack.prototype.getMin = function() {
+MinStack.prototype.getMin = function () {
   return this.minStack[this.minStack.length - 1];
 };
 

@@ -8,20 +8,20 @@ const lengthOfLongestSubstring = function (s) {
   const set = new Set();
   let right = -1;
   let maxLength = 0;
-  let strLength = s.length;
+  const strLength = s.length;
   for (let i = 0; i < strLength; i++) {
     if (i !== 0) {
-      set.delete(s[i-1]);
+      set.delete(s[i - 1]);
     }
-    
-    while (right < strLength - 1 && !set.has(s[right+1])) {
-      set.add(s[right+1]);
-      right ++
+
+    while (right < strLength - 1 && !set.has(s[right + 1])) {
+      set.add(s[right + 1]);
+      right++;
     }
     maxLength = Math.max(maxLength, right - i + 1);
   }
   return maxLength;
-}
+};
 
 module.exports = lengthOfLongestSubstring;
 
@@ -47,7 +47,7 @@ module.exports = lengthOfLongestSubstring;
 /**
 示例 1:
 输入: "abcabcbb"
-输出: 3 
+输出: 3
 解释: 因为无重复字符的最长子串是 "abc"，所以其长度为 3。
 示例 2:
 

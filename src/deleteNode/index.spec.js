@@ -38,5 +38,3 @@ test(`delete ${node.val} node`, () => {
   deleteNode(node);
   expect(tree).toEqual(result);
 });
-
-

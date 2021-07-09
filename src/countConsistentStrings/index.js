@@ -7,18 +7,18 @@ const countConsistentStrings = function (allowed, words) {
   let result = 0;
   for (let i = 0; i < words.length; i++) {
     let flag = true;
-    for (let j = 0; j < words[i].length; j ++) {
+    for (let j = 0; j < words[i].length; j++) {
       if (!allowed.includes(words[i][j])) {
-        flag = false
+        flag = false;
         break;
       }
     }
     if (flag) {
-      result ++;
+      result++;
     }
   }
   return result;
-}
+};
 
 module.exports = countConsistentStrings;
 

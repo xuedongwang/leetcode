@@ -6,7 +6,7 @@
 const reverseLeftWords = function (s, n) {
   let str1 = '';
   let str2 = '';
-  for (let i = 0; i < s.length; i ++) {
+  for (let i = 0; i < s.length; i++) {
     if (i >= n) {
       str1 += s[i];
     } else {
@@ -14,7 +14,7 @@ const reverseLeftWords = function (s, n) {
     }
   }
   return str1 + str2;
-}
+};
 
 module.exports = reverseLeftWords;
 

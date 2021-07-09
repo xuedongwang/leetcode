@@ -6,7 +6,7 @@
 const insertSort = function (arr) {
   for (let i = 1; i < arr.length; i++) {
     let index = i;
-    let target = arr[index];
+    const target = arr[index];
     while (index > 0 && arr[index - 1] > target) {
       arr[index] = arr[index - 1];
       index--;
@@ -14,6 +14,6 @@ const insertSort = function (arr) {
     arr[index] = target;
   }
   return arr;
-}
+};
 
 module.exports = insertSort;

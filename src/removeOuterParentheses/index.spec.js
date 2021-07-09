@@ -1,15 +1,14 @@
 
 const removeOuterParentheses = require('./index');
 
-test(`removeOuterParentheses('(()())(())') return '()()()'`, () => {
+test('removeOuterParentheses(\'(()())(())\') return \'()()()\'', () => {
   expect(removeOuterParentheses('(()())(())')).toBe('()()()');
 });
 
-test(`removeOuterParentheses('(()())(())(()(()))') return '()()()()(())'`, () => {
+test('removeOuterParentheses(\'(()())(())(()(()))\') return \'()()()()(())\'', () => {
   expect(removeOuterParentheses('(()())(())(()(()))')).toBe('()()()()(())');
 });
 
-test(`removeOuterParentheses('()()') return ''`, () => {
+test('removeOuterParentheses(\'()()\') return \'\'', () => {
   expect(removeOuterParentheses('()()')).toBe('');
 });
-

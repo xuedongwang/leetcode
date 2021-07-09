@@ -20,6 +20,6 @@ const thirdMax = function (nums) {
     }
   });
   return third === Number.MIN_SAFE_INTEGER ? first : third;
-}
+};
 
 module.exports = thirdMax;

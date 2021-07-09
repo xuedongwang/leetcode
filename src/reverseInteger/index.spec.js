@@ -29,8 +29,6 @@ test('reverseInteger(-9463847412) return 0', () => {
   expect(reverseInteger(-9463847412)).toBe(0);
 });
 
-
 test('reverseInteger(12345678999) return 0', () => {
   expect(reverseInteger(12345678999)).toBe(0);
 });
-

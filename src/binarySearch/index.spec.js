@@ -1,21 +1,20 @@
 
 const binarySearch = require('./index');
 
-test(`binarySearch([-1,0,3,5,9,12], 9) return 4`, () => {
-  expect(binarySearch([-1,0,3,5,9,12], 9)).toBe(4);
+test('binarySearch([-1,0,3,5,9,12], 9) return 4', () => {
+  expect(binarySearch([-1, 0, 3, 5, 9, 12], 9)).toBe(4);
 });
 
-test(`binarySearch([-1,0,3,5,9,12], -1) return 0`, () => {
-  expect(binarySearch([-1,0,3,5,9,12], -1)).toBe(0);
+test('binarySearch([-1,0,3,5,9,12], -1) return 0', () => {
+  expect(binarySearch([-1, 0, 3, 5, 9, 12], -1)).toBe(0);
 });
 
-test(`binarySearch([-1,0,3,5,9,12], 12) return 5`, () => {
-  expect(binarySearch([-1,0,3,5,9,12], 12)).toBe(5);
+test('binarySearch([-1,0,3,5,9,12], 12) return 5', () => {
+  expect(binarySearch([-1, 0, 3, 5, 9, 12], 12)).toBe(5);
 });
 
-
-test(`binarySearch([-1,0,3,5,9,12], 2) return -1`, () => {
-  expect(binarySearch([-1,0,3,5,9,12], 2)).toBe(-1);
+test('binarySearch([-1,0,3,5,9,12], 2) return -1', () => {
+  expect(binarySearch([-1, 0, 3, 5, 9, 12], 2)).toBe(-1);
 });
 
 // 示例 1:
@@ -28,7 +27,7 @@ test(`binarySearch([-1,0,3,5,9,12], 2) return -1`, () => {
 // 输入: nums = [-1,0,3,5,9,12], target = 2
 // 输出: -1
 // 解释: 2 不存在 nums 中因此返回 -1
-//  
+//
 
 // 提示：
 

@@ -9,8 +9,8 @@ const runningSum = function (nums) {
     const total = a + b;
     result.push(total);
     return total;
-  }, 0)
+  }, 0);
   return result;
-}
+};
 
 module.exports = runningSum;

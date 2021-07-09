@@ -4,8 +4,8 @@
  */
 
 const maximumWealth = function (accounts) {
-  return Math.max(...accounts.map(row => row.reduce((a, b) => a + b, 0)))
-}
+  return Math.max(...accounts.map(row => row.reduce((a, b) => a + b, 0)));
+};
 
 module.exports = maximumWealth;
 
@@ -23,11 +23,10 @@ module.exports = maximumWealth;
 // 输出：10
 // 解释：
 // 第 1 位客户的资产总量 = 6
-// 第 2 位客户的资产总量 = 10 
+// 第 2 位客户的资产总量 = 10
 // 第 3 位客户的资产总量 = 8
 // 第 2 位客户是最富有的，资产总量是 10
 // 示例 3：
 
 // 输入：accounts = [[2,8,7],[7,1,3],[1,9,5]]
 // 输出：17
-

@@ -10,10 +10,10 @@ const merge = function (left, right) {
   while (i < left.length && j < right.length) {
     if (left[i] < right[j]) {
       result.push(left[i]);
-      i++
+      i++;
     } else {
       result.push(right[j]);
-      j++
+      j++;
     }
   }
   if (i < left.length) {
@@ -22,16 +22,16 @@ const merge = function (left, right) {
     result.push(...right.slice(j));
   }
   return result;
-}
+};
 
 const mergeSort = function (arr) {
   if (arr.length <= 1) {
     return arr;
   }
-  let m = Math.floor(arr.length / 2) // 2 // 1
-  let left = mergeSort(arr.slice(0, m)) // [5,4] // [5]
-  let right = mergeSort(arr.slice(m)) // [4]
-  return merge(left, right) // [5] [4] -> [4, 5]
-}
+  const m = Math.floor(arr.length / 2); // 2 // 1
+  const left = mergeSort(arr.slice(0, m)); // [5,4] // [5]
+  const right = mergeSort(arr.slice(m)); // [4]
+  return merge(left, right); // [5] [4] -> [4, 5]
+};
 
 module.exports = mergeSort;

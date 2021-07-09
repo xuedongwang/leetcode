@@ -4,16 +4,16 @@
  */
 
 const rotate = function (nums, k) {
-  while(k > 0) {
-    k --
-    let temp = nums[nums.length - 1];
+  while (k > 0) {
+    k--;
+    const temp = nums[nums.length - 1];
     for (let i = nums.length - 1; i > 0; i--) {
       nums[i] = nums[i - 1];
     }
     nums[0] = temp;
   }
   return nums;
-}
+};
 
 module.exports = rotate;
 
@@ -23,7 +23,6 @@ module.exports = rotate;
 
 尽可能想出更多的解决方案，至少有三种不同的方法可以解决这个问题。
 你可以使用空间复杂度为 O(1) 的 原地 算法解决这个问题吗？
- 
 
 示例 1:
 
@@ -37,10 +36,9 @@ module.exports = rotate;
 
 输入：nums = [-1,-100,3,99], k = 2
 输出：[3,99,-1,-100]
-解释: 
+解释:
 向右旋转 1 步: [99,-1,-100,3]
 向右旋转 2 步: [3,99,-1,-100]
- 
 
 提示：
 

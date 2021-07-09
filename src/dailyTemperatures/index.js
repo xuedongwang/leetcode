@@ -15,7 +15,7 @@ const dailyTemperatures = function (T) {
     stack.push(i);
   }
   return result;
-}
+};
 
 module.exports = dailyTemperatures;
 

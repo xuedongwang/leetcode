@@ -13,17 +13,17 @@ const reverseInteger = function (x) {
 
     // to big
     if (result > MAX / 10 || result === parseInt(MAX / 10) && last > MAX % 10) {
-      return 0
+      return 0;
     }
     // to small
     if (result < MIN / 10 || result === parseInt(MIN / 10) && last < MIN % 10) {
-      return 0
+      return 0;
     }
 
     result = result * 10 + last;
   }
 
   return result;
-}
+};
 
 module.exports = reverseInteger;

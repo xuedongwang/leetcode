@@ -5,11 +5,11 @@
 
 const xorOperation = function (n, start) {
   let result = 0;
-  while (n --) {
+  while (n--) {
     const value = start + 2 * n;
-    result ^= value
+    result ^= value;
   }
   return result;
-}
+};
 
 module.exports = xorOperation;
