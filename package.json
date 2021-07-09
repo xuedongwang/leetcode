@@ -4,10 +4,10 @@
   "description": "leetcode",
   "scripts": {
     "new": "node ./shell/createNew.js",
-    "test": "jest src/moveZeroes/*.spec.js --coverage",
+    "test": "jest src/firstUniqChar/*.spec.js --coverage",
     "test:all": "jest src/**/*.spec.js --coverage",
-    "commit": "git pull && git add . && git commit -m 'feat(moveZeroes): 增加 moveZeroes 并完成测试' && git push",
-    "debug": "node src/moveZeroes/index.js"
+    "commit": "git pull && git add . && git commit -m 'feat(firstUniqChar): 增加 firstUniqChar 并完成测试' && git push",
+    "debug": "node src/firstUniqChar/index.js"
   },
   "author": "XueDong Wang",
   "license": "MIT",
