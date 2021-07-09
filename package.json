@@ -4,10 +4,10 @@
   "description": "leetcode",
   "scripts": {
     "new": "node ./shell/createNew.js",
-    "test": "jest src/rotate/*.spec.js --coverage",
+    "test": "jest src/containsDuplicate/*.spec.js --coverage",
     "test:all": "jest src/**/*.spec.js --coverage",
-    "commit": "git pull && git add . && git commit -m 'feat(rotate): 增加 rotate 并完成测试' && git push",
-    "debug": "node src/rotate/index.js"
+    "commit": "git pull && git add . && git commit -m 'feat(containsDuplicate): 增加 containsDuplicate 并完成测试' && git push",
+    "debug": "node src/containsDuplicate/index.js"
   },
   "author": "XueDong Wang",
   "license": "MIT",
