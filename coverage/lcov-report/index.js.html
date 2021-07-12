@@ -22,22 +22,22 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>11/11</span>
+        <span class='fraction'>15/15</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>4/4</span>
+        <span class='fraction'>10/10</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>1/1</span>
+        <span class='fraction'>2/2</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>10/10</span>
+        <span class='fraction'>15/15</span>
       </div>
     </div>
     <p class="quiet">
@@ -89,35 +89,37 @@
 <a name='L41'></a><a href='#L41'>41</a>
 <a name='L42'></a><a href='#L42'>42</a>
 <a name='L43'></a><a href='#L43'>43</a>
-<a name='L44'></a><a href='#L44'>44</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-yes">25x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">24x</span>
+<span class="cline-any cline-yes">24x</span>
+<span class="cline-any cline-yes">24x</span>
+<span class="cline-any cline-yes">24x</span>
 <span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">17x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">13x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">41x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -134,54 +136,55 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">&nbsp;
 /**
- * @ref: https://leetcode-cn.com/leetbook/read/top-interview-questions-easy/xn5z8r/
+ * @ref: https://leetcode-cn.com/leetbook/read/top-interview-questions-easy/xne8id/
  */
 &nbsp;
-const firstUniqChar = function (s) {
-  const m = new Map();
-  for (let i of s) {
-    if (m.has(i)) {
-      m.set(i, m.get(i) + 1);
-    } else {
-      m.set(i, 1);
-    }
+const isPalindrome = function (s) {
+  if (s.length === 1 || s.length === 0) {
+    return true;
   }
-  for (let i = 0; i &lt; s.length; i++) {
-    if (m.get(s[i]) === 1) {
-      return i;
-    }
+  let i = 0;
+  let j = s.length - 1;
+  debugger;
+  if (!isLetterOrNumber(s[i])) {
+    return isPalindrome(s.slice(1));
+  }
+  if (!isLetterOrNumber(s[j])) {
+    return isPalindrome(s.slice(0, -1));
+  }
+  if (s[i].toLowerCase() !== s[j].toLowerCase()) {
+    return false;
+  } else {
+    return isPalindrome(s.slice(1, -1));
   }
 }
 &nbsp;
-module.exports = firstUniqChar;
-/**
-给定一个字符串，找到它的第一个不重复的字符，并返回它的索引。如果不存在，则返回 -1。
+function isLetterOrNumber(s) {
+  return /^[a-z0-9]$/i.test(s);
+}
 &nbsp;
- 
+module.exports = isPalindrome;
 &nbsp;
-示例：
+/*
+给定一个字符串，验证它是否是回文串，只考虑字母和数字字符，可以忽略字母的大小写。
 &nbsp;
-s = "leetcode"
-返回 0
+说明：本题中，我们将空字符串定义为有效的回文串。
 &nbsp;
-s = "loveleetcode"
-返回 2
- 
+示例 1:
 &nbsp;
-提示：你可以假定该字符串只包含小写字母。
+输入: "A man, a plan, a canal: Panama"
+输出: true
+示例 2:
 &nbsp;
-作者：力扣 (LeetCode)
-链接：https://leetcode-cn.com/leetbook/read/top-interview-questions-easy/xn5z8r/
-来源：力扣（LeetCode）
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
- */
-&nbsp;</pre></td></tr>
+输入: "race a car"
+输出: false
+*/</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Jul 09 2021 18:28:43 GMT+0800 (GMT+08:00)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Jul 12 2021 15:35:15 GMT+0800 (GMT+08:00)
 </div>
 </div>
 <script src="prettify.js"></script>
