@@ -6,13 +6,13 @@ const link1 = {
   next: {
     val: 2,
     next: {
-      val: 3,
+      val: 2,
       next: {
         val: 4,
         next: {
           val: 5,
           next: {
-            val: 6,
+            val: 2,
             next: null
           }
         }
@@ -24,16 +24,10 @@ const link1 = {
 const link1Result = {
   val: 1,
   next: {
-    val: 3,
+    val: 4,
     next: {
-      val: 4,
-      next: {
-        val: 5,
-        next: {
-          val: 6,
-          next: null
-        }
-      }
+      val: 5,
+      next: null
     }
   }
 }

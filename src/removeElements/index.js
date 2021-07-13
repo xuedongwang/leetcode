@@ -4,7 +4,6 @@
  */
 
 const removeElements = function (head, val) {
-  debugger;
   if (head === null) {
     return head;
   }
